@@ -1,3 +1,1 @@
-const { attempt } = require("./dist");
-
-module.exports = attempt;
+module.exports = require("./dist");
