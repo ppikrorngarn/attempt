@@ -1,4 +1,4 @@
-const attemptSynchronous = (func: Function, ...args: any[]): any[] => {
+export const synchronous = (func: Function, ...args: any[]): any[] => {
   try {
     const value = func(...args);
     return [value, null];
@@ -7,7 +7,7 @@ const attemptSynchronous = (func: Function, ...args: any[]): any[] => {
   }
 };
 
-const attemptAsynchronous = async (
+export const asynchronous = async (
   asyncFunc: Function,
   ...args: any[]
 ): Promise<any[]> => {
@@ -16,17 +16,5 @@ const attemptAsynchronous = async (
     return [value, null];
   } catch (error) {
     return [null, error];
-  }
-};
-
-const isAsync = (func: Function) => {
-  return func.constructor.name === "AsyncFunction";
-};
-
-export const attempt = (func: Function, ...args: any[]) => {
-  if (isAsync(func)) {
-    return attemptAsynchronous(func, ...args);
-  } else {
-    return attemptSynchronous(func, ...args);
   }
 };
