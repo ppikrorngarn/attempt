@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "publish": "npm test && tsc && npm publish"
+    "publish-npm": "tsc && npm t && npm publish --access public"
   },
   "author": "Piyawasin Pikror-ngarn",
   "license": "ISC",
