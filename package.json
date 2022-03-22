@@ -1,6 +1,6 @@
 {
   "name": "@piyawasin/attempt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Inspired by Golang error handling, this util will help you code defensively by always handling the errors.",
   "main": "index.js",
   "scripts": {
