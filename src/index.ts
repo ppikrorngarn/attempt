@@ -7,6 +7,8 @@ export const synchronous = (func: Function, ...args: any[]): any[] => {
   }
 };
 
+export const $ = synchronous;
+
 export const asynchronous = async (
   asyncFunc: Function,
   ...args: any[]
@@ -18,3 +20,5 @@ export const asynchronous = async (
     return [null, error];
   }
 };
+
+export const $$ = asynchronous;
