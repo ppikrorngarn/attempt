@@ -6,7 +6,7 @@ Inspired by Golang error handling, this util will help you code defensively by a
 
 ```js script
 const { $, $$ } = require('@piyawasin/attempt');
-// or use { synchronous, asynchronous } for the full form
+// or use { synchronous, asynchronous } for the full forms
 
 const main = async () => {
 
