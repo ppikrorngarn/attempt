@@ -1,4 +1,4 @@
-import { $, $$ } from ".";
+import { $, $$ } from "./attempt";
 
 test("attempt with a synchronous function", () => {
   const syncFunc = (a: number, b: number): number => a + b;
