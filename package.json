@@ -9,6 +9,16 @@
   },
   "author": "Piyawasin Pikror-ngarn",
   "license": "ISC",
+  "keywords": [
+    "error",
+    "handling",
+    "function",
+    "error-handling",
+    "exception",
+    "go",
+    "golang",
+    "sugar"
+  ],
   "devDependencies": {
     "@types/jest": "^27.4.1",
     "jest": "^27.5.1",
