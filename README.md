@@ -10,7 +10,7 @@ const { $, $$ } = require('@piyawasin/attempt');
 
 const main = async () => {
 
-  const add = (a, b) => a + b;=
+  const add = (a, b) => a + b;
   const [v0, e0] = $(add, 1, 3);
   if (e0) {
     console.log(e0); // <unreachable>
