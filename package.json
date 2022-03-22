@@ -4,12 +4,13 @@
   "description": "Inspired by Golang error handling, this util will help you code defensively by always handling the errors.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Piyawasin Pikror-ngarn",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
     "ts-jest": "^27.1.3",
     "typescript": "^4.6.2"
   }
