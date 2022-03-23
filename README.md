@@ -5,8 +5,7 @@ Inspired by Golang error handling, this util will help you code defensively by a
 ## Example:
 
 ```js script
-const { $, $$ } = require('@piyawasin/attempt');
-// or use { attempt, attemptAsync } for the full forms
+const { attempt: $, attemptAsync: $$ } = require('@piyawasin/attempt');
 
 const main = async () => {
 

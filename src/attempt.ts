@@ -7,8 +7,6 @@ export const attempt = (func: Function, ...args: any[]): any[] => {
   }
 };
 
-export const $ = attempt;
-
 export const attemptAsync = async (
   asyncFunc: Function,
   ...args: any[]
@@ -20,5 +18,3 @@ export const attemptAsync = async (
     return [null, error];
   }
 };
-
-export const $$ = attemptAsync;
