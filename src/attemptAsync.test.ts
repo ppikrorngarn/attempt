@@ -4,7 +4,7 @@ test("attempt with an asynchronous function", async () => {
   const asyncFunc = async (a: number, b: number): Promise<number> => {
     return a + b;
   };
-  const [value, error] = (await $$(asyncFunc, 1, 2)) as any[];
+  const [value, error] = await $$(asyncFunc, 1, 2);
   expect(value).toBe(3);
   expect(error).toBeNull();
 });

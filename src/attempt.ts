@@ -1,4 +1,4 @@
-export const attempt = (func: Function, ...args: any[]): any[] => {
+export const attempt = (func: Function, ...args: any[]): [any, any] => {
   try {
     const value = func(...args);
     return [value, null];
