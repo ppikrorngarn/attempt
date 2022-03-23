@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "publish-npm": "tsc && npm t && npm publish --access public"
+    "prepublish": "tsc && npm t",
+    "publish-npm": "npm publish --access public"
   },
   "author": "Piyawasin Pikror-ngarn",
   "license": "ISC",
