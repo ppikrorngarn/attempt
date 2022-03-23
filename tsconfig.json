@@ -4,6 +4,7 @@
   "compilerOptions": {
     "target": "ES3",
     "outDir": "dist",
-    "lib": ["ES2015"]
+    "lib": ["ES2015"],
+    "declaration": true
   }
 }
