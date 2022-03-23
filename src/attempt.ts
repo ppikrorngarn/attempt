@@ -1,4 +1,4 @@
-export const synchronous = (func: Function, ...args: any[]): any[] => {
+export const attempt = (func: Function, ...args: any[]): any[] => {
   try {
     const value = func(...args);
     return [value, null];
@@ -7,9 +7,9 @@ export const synchronous = (func: Function, ...args: any[]): any[] => {
   }
 };
 
-export const $ = synchronous;
+export const $ = attempt;
 
-export const asynchronous = async (
+export const attemptAsync = async (
   asyncFunc: Function,
   ...args: any[]
 ): Promise<any[]> => {
@@ -21,4 +21,4 @@ export const asynchronous = async (
   }
 };
 
-export const $$ = asynchronous;
+export const $$ = attemptAsync;
