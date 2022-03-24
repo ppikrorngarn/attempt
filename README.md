@@ -2,6 +2,8 @@
 
 Inspired by Golang error handling, this util will help you code defensively by always handling the errors.
 
+Feel free to contribute, please send a pull request: https://github.com/ppikrorngarn/attempt
+
 ## Example:
 
 ```js script
