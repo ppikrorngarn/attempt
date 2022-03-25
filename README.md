@@ -32,7 +32,7 @@ const main = async () => {
     "somePassword",
     true
   );
-  if (error) {
+  if (error1) {
     // handle error here
   } else {
     // do something with the user data here
