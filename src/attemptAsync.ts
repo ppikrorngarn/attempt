@@ -1,13 +1,18 @@
-import { errorOrNull } from "./types";
+/**
+ * Executes an async function and returns a tuple [result, error].
+ * @param func Async function to execute
+ * @param args Arguments to pass to the function
+ */
+import type { AttemptResult } from "./types";
 
-export const attemptAsync = async (
-  asyncFunc: Function,
-  ...args: any[]
-): Promise<[any, errorOrNull]> => {
+export async function attemptAsync<T, Args extends any[], E = unknown>(
+  func: (...args: Args) => Promise<T>,
+  ...args: Args
+): Promise<AttemptResult<T, E>> {
   try {
-    const value = await asyncFunc(...args);
-    return [value, null];
+    return [await func(...args), null];
   } catch (error) {
-    return [null, error];
+    return [null, error as E];
   }
-};
+}
+

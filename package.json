@@ -1,12 +1,25 @@
 {
   "name": "@piyawasin/attempt",
-  "version": "1.0.9",
-  "description": "Inspired by Golang error handling, this util will help you code defensively by always handling the errors.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "2.0.0",
+  "description": "Inspired by Golang error handling, this package will help you code defensively by always handling the errors.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "test": "jest",
-    "prepublish": "tsc && npm t",
+    "build:esm": "tsc --project tsconfig.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build": "npm run build:esm && npm run build:cjs",
+    "prepublish": "npm run build",
     "publish-npm": "npm publish --access public"
   },
   "author": "Piyawasin Pikror-ngarn",
@@ -23,9 +36,6 @@
   ],
   "readme": "README.md",
   "devDependencies": {
-    "@types/jest": "^27.4.1",
-    "jest": "^27.5.1",
-    "ts-jest": "^27.1.3",
     "typescript": "^4.6.2"
   }
 }
