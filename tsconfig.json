@@ -1,9 +1,12 @@
 {
   "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.test.ts"],
   "compilerOptions": {
-    "outDir": "dist",
     "lib": ["ES2015"],
-    "declaration": true
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   }
 }
