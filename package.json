@@ -1,7 +1,7 @@
 {
   "name": "@piyawasin/attempt",
-  "version": "1.0.9",
-  "description": "Inspired by Golang error handling, this util will help you code defensively by always handling the errors.",
+  "version": "2.0.0",
+  "description": "Inspired by Golang error handling, this package will help you code defensively by always handling the errors.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
