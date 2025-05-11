@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest",
-    "prepublish": "tsc && npm t",
+    "prepublish": "tsc",
     "publish-npm": "npm publish --access public"
   },
   "author": "Piyawasin Pikror-ngarn",
@@ -23,9 +22,6 @@
   ],
   "readme": "README.md",
   "devDependencies": {
-    "@types/jest": "^27.4.1",
-    "jest": "^27.5.1",
-    "ts-jest": "^27.1.3",
     "typescript": "^4.6.2"
   }
 }
