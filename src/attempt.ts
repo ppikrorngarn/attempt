@@ -1,10 +1,18 @@
-import { errorOrNull } from "./types";
+/**
+ * Executes a function and returns a tuple [result, error].
+ * @param func Function to execute
+ * @param args Arguments to pass to the function
+ */
+import type { AttemptResult } from "./types";
 
-export const attempt = (func: Function, ...args: any[]): [any, errorOrNull] => {
+export function attempt<T, Args extends any[], E = unknown>(
+  func: (...args: Args) => T,
+  ...args: Args
+): AttemptResult<T, E> {
   try {
-    const value = func(...args);
-    return [value, null];
+    return [func(...args), null];
   } catch (error) {
-    return [null, error];
+    return [null, error as E];
   }
-};
+}
+

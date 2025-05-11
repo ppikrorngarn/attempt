@@ -1,1 +1,1 @@
-export type errorOrNull = Error | null;
+export type AttemptResult<T, E = unknown> = [T, null] | [null, E];
