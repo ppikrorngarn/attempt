@@ -30,9 +30,9 @@ Safely executes a synchronous function.
 
 - **Returns:** `[result, error]` — If the function throws, `result` is `null` and `error` is set.
 
-### `attemptAsync(fn, ...args)`
+### `attemptAsync(fnOrPromise, ...args)`
 
-Safely executes an async function or any function returning a Promise.
+Safely executes an async function or resolves a Promise directly.
 
 - **Returns:** `Promise<[result, error]>` — If the function rejects/throws, `result` is `null` and `error` is set.
 
@@ -58,7 +58,7 @@ if (err) {
   console.log("Parsed number:", num);
 }
 
-// Asynchronous
+// Asynchronous (Function)
 async function fetchData(url) {
   const res = await fetch(url);
   if (!res.ok) throw new Error("Network error");
@@ -75,6 +75,13 @@ async function fetchData(url) {
   } else {
     console.log("Fetched data:", data);
   }
+})();
+
+// Asynchronous (Promise)
+(async () => {
+  const myPromise = Promise.resolve("Success!");
+  const [res, err] = await attemptAsync(myPromise);
+  console.log(res); // "Success!"
 })();
 ```
 
