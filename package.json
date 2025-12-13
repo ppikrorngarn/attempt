@@ -1,7 +1,7 @@
 {
   "name": "@piyawasin/attempt",
   "version": "2.0.1",
-  "description": "Inspired by Golang error handling, this package will help you code defensively by always handling the errors.",
+  "description": "A minimal, type-safe utility for defensive error handling in JS/TS. Inspired by Go, it uses tuple-based returns to eliminate try-catch nesting and handle synchronous/asynchronous errors predictably.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
