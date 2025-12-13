@@ -38,6 +38,10 @@
     "golang",
     "sugar"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ppikrorngarn/attempt"
+  },
   "readme": "README.md",
   "devDependencies": {
     "typescript": "^4.6.2"
